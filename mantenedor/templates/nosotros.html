@@ -1,0 +1,161 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Smile</title>
+    <link rel="icon" type="image/png" href="{% static 'img/smile png ico.ico' %}">
+    <!-- BOOSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+
+
+<body>
+    <header class="header">
+        <!--BARRA NAVEGACION-->
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+
+
+            <a class="navbar-brand   " href="{% url 'dr.smile:index'%}">
+                <img src="{% static 'img/smile png ico.ico' %}" alt="Inicio" style="width: 40%;">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+            <div class="collapse navbar-collapse  " id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dr.smile:nosotros'%}">Nosotros<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'dr.smile:microsoldadura'%}">Microsoldadura</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:electronica'%}">Electronica</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:drones'%}">Drones</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Servicios
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'dr.smile:reballing'%}">Reballing</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:serviciotec'%}">Servicios Tecnicos Electronicos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dr.smile:contacto'%}">Contacto</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'dr.smile:login'%}">Login</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <article class="articulo">
+        <br><br><br><br><br><br>
+        <div class="container">
+            <div class="container">
+                <br>
+                <h1 class="display-4">¿Quienes somos?
+                    <br><br>
+                </h1>
+                <p class="lead">Centro de Estudios Técnicos Avanzados para la formación al mas alto nivel de personas en distintas áreas de servicios técnicos electrónicos e informáticos, fundada en Chile desde el año 2018, brindamos capacitaciones al mas alto nivel
+                    para la prestación de servicio técnico a todo tipo de equipos electrónicos, en el que incentivamos el emprendimiento a través del aprendizaje de un oficio noble y lucrativo, ademas de ecológico por naturaleza ya que enseñamos a reparar
+                    equipos que están en desuso regresándolos a su ciclo de vida útil, contribuyendo con el medio ambiente y fortaleciendo la capacidad de ahorro de las personas. El proceso de transferencia de conocimiento se realiza a través de capacitaciones
+                    en diversas áreas de la electrónica, como la reparación de Celulares, Notebooks, Drones, Fotocopiadoras, Consolas de Video Juegos y otros equipos electrónicos de consumo masivo y que hoy en día son considerables de primera necesidad.
+                </p>
+                <p class="lead"> Estámos constituido por un grupo de Ingenieros Electrónicos e Informáticos con más de 20 años de trayectoria en la reparación de estos equipos así como en otros equipos electrónicos de consumo masivo, nuestro amplio conocimiento en Electrónica
+                    e Informática (hardware y software) hacen de nuestra compañía la mejor opción para la prestación de servicios o su formación en cualquiera de las áreas impartidas, así mismo, nuestra red de egresados quienes actualmente aplican sus
+                    conocimientos en la práctica brindan la certeza de que usted recibirá una capacitación de la mas alta calidad.</p>
+                <p class="lead"> brindamos varias modalidades de capacitaciones que van desde la forma presencial, presencial intensiva, semi-presencial y online, lo cual permite que la capacitación se amolde perfectamente a sus necesidades de tiempo cualquiera que estas
+                    sean.</p>
+            </div>
+            <section class="section">
+            </section>
+    </article>
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img src="{% static 'img/smile png ico.ico' %}" alt="Logo no disponible" style="width: 30%;">
+                <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Cacacteristicas</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Cosas interesantes</a></li>
+                    <li><a class="text-muted" href="#">Característica aleatoria</a></li>
+                    <li><a class="text-muted" href="#">Característica de equipo</a></li>
+                    <li><a class="text-muted" href="#">Cosas para
+              desarrolladores</a></li>
+                    <li><a class="text-muted" href="#">Otro</a></li>
+                    <li><a class="text-muted" href="#">Ultima vez</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Recursos</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Recurso</a></li>
+                    <li><a class="text-muted" href="#">Nombre del recurso
+            </a></li>
+                    <li><a class="text-muted" href="#">Otro recurso</a></li>
+                    <li><a class="text-muted" href="#">Recurso final</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Recursos</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Negocio</a></li>
+                    <li><a class="text-muted" href="#">Educación</a></li>
+                    <li><a class="text-muted" href="#">Gobierno</a></li>
+                    <li><a class="text-muted" href="#">Juego</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Acerca de</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Equipo</a></li>
+                    <li><a class="text-muted" href="#">Ubicaciones</a></li>
+                    <li><a class="text-muted" href="#">Privacidad</a></li>
+                    <li><a class="text-muted" href="#">Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- BOOSTRAP JAVASCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Smile</title>
+    <link rel="icon" type="image/png" href="{% static 'img/smile png ico.ico' %}">
+    <!-- BOOSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+
+
+
+<body>
+    <header class="header">
+        <!--BARRA NAVEGACION-->
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+
+
+            <a class="navbar-brand   " href="{% url 'dr.smile:index'%}">
+                <img src="{% static 'img/smile png ico.ico' %}" alt="Inicio" style="width: 40%;">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+            <div class="collapse navbar-collapse  " id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dr.smile:nosotros'%}">Nosotros<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'dr.smile:microsoldadura'%}">Microsoldadura</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:electronica'%}">Electronica</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:drones'%}">Drones</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Servicios
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'dr.smile:reballing'%}">Reballing</a>
+                            <a class="dropdown-item" href="{% url 'dr.smile:serviciotec'%}">Servicios Tecnicos Electronicos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dr.smile:contacto'%}">Contacto</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'dr.smile:login'%}">Login</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <article class="articulo">
+            <br><br><br>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-4">CURSO DE REPARACION DE DRONES PROGRAMA DE CERTIFICACION TECNICA PROFESIONAL
+                    </h1>
+                    <p class="lead">Aprenda y certifique sus habilidades en la Reparación de Drones</p>
+                    <hr class="my-4">
+                    <iframe width="100%" height="615" src="https://www.youtube.com/embed/kTWoeqPXpuo?start=15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <section class="section">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      NIVEL DE CERTIFICACIÓN TÉCNICA
+                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Bases sólida de Electrónica que te permitan realizar análisis sobre circuitos típicos en aparatos electrónicos Funcionamiento de los componentes electrónicos típicamente encontrados en equipos como celulares, computadoras, consolas etc. Utilizar la instrumentación
+                                        típica en un laboratorio de electrónica de servicio como son fuentes de poder regulable, multímetros, osciloscopios, generadores de funciones, entre los mas comunes. Fundamentos de electrónica digital y analógica.
+                                        Fundamentos de señales eléctricas. Fundamentos de protocolos de comunicación. Fundamentos de electrónica de potencia. Simbología y la lectura de diagramas eléctricos </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      CONTENIDO DETALLADO DEL CURSO
+                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="hola" style=" padding-block: 50px;">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">BLOQUE 1</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Contenido</h6>
+                                                    <p class="card-text">
+                                                        SISTEMA DE UNIDADES <br> - Carga y Corriente. <br> - Tensión eléctrica. <br> - Potencia y Energía. <br> - Resistores <br> - Capacitores <br> - Inductore <br> - Diodos <br> - Ley de Ohm. <br> - Nodos
+                                                        y Lazos. <br> - Resistores en Serie. <br> - Divisor de Tensión. <br> - Resistores en Paralelo. <br> - Divisor de Corriente. <br> - Análisis Nodal. <br> - Análisis de Lazos. <br> * EVALUACION 1 <br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">BLOQUE 2</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Contenido</h6>
+                                                    <p class="card-text">
+                                                        SENALES <br> - Teoría de señales (Frecuencia, Amplitud, Fase, etc). <br> - Senoides <br> - Fasores <br> - Impedancia. <br> - Admitancia. <br> - Ley de Kirchhoff. <br> - Desfasadores. <br> - Respuesta
+                                                        de Circuitos en Frecuen cia. <br> - Circuitos de Primer Orden. <br> - Circuito RC. <br> - Circuito RL. <br> - Circuito RLC en serie. <br> - Circuito RLC en Paralelo. <br> - Filtros pasivos <br> -
+                                                        Filtro pasa bajo <br> - Filtro pasa alto <br> - Filtro pasa banda <br> - Filtro rechaza banda <br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">BLOQUE 3</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Contenido</h6>
+                                                    <p class="card-text">
+                                                        FUENTE DE PODER <br> - Fuente de Poder. <br> - Uso de la fuente de poder. <br> - Relación con la ley de Ohm. <br> - Mediciones de corriente con fuente de poder <br> - Mediciones de Impedancia de
+                                                        tierra con Fuente de poder <br> - Medición de Cortos circuitos. ​
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">BLOQUE 4</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Contenido</h6>
+                                                    <p class="card-text">
+                                                        OSCILOSCOPIO <br> - Fundamentos de Osciloscopio. <br> - Uso del Osciloscopio <br> - Instrucciones de uso. <br> - Señales en el dominio del tiempo. <br> - Señales en el espacio de fases. <br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br> div class="card" >
+                                            <div class="card-body">
+                                                <h5 class="card-title">BLOQUE 5</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Contenido</h6>
+                                                <p class="card-text">
+                                                    GENERADOR DE FUNCIONES <br> - Uso del Generador de Funciones <br> - Aplicaciones en el diagnostico Electrónico. <br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    VALORES
+                  </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="hola" style=" padding-block: 50px;">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">NIVEL BASICO</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Modalidad: Online</h6>
+                                                <p class="card-text">
+                                                    Antes: $500 USD
+                                                    <br> OFERTA ESPECIAL $170.000clp ($200 USD)
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">NIVEL BASICO</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Modalidad: Semi-Presencial</h6>
+                                                <p class="card-text">
+                                                    Antes: $500 USD
+                                                    <br> OFERTA ESPECIAL $300.000clp ($400 USD)
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">NIVEL BASICO</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Modalidad: Presencial</h6>
+                                                <p class="card-text">
+                                                    Antes: $700 USD
+                                                    <br> OFERTA ESPECIAL $500.000clp ($625 USD)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <section class="container" id="galeria">
+                        <div class="text-center pt-5 ">
+                            <h1>Galeria</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime atque quae repellendus eos natus excepturi facilis! Dolorem, harum alias quasi facere consequatur quas natus, unde deserunt minus, consequuntur ipsa fugit?
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron1.png' %}" alt="Galeria Imagenes">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron2.png'%}" alt="Galeria Imagenes">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron3.png '%}" alt="Galeria Imagenes">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron4.png'%}" alt="Galeria Imagenes">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron5.png'%}" alt="Galeria Imagenes">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <img src="{% static 'img/dron6.png'%}" alt="Galeria Imagenes">
+                            </div>
+                        </div>
+                        <br><br>
+                    </section>
+        </article>
+
+
+        <footer id="footer" class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img src="{% static 'img/smile png ico.ico' %}" alt="Logo no disponible" style="width: 30%;">
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Cacacteristicas</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cosas interesantes</a></li>
+                        <li><a class="text-muted" href="#">Característica aleatoria</a></li>
+                        <li><a class="text-muted" href="#">Característica de equipo</a></li>
+                        <li><a class="text-muted" href="#">Cosas para
+                desarrolladores</a></li>
+                        <li><a class="text-muted" href="#">Otro</a></li>
+                        <li><a class="text-muted" href="#">Ultima vez</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Recursos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Recurso</a></li>
+                        <li><a class="text-muted" href="#">Nombre del recurso
+              </a></li>
+                        <li><a class="text-muted" href="#">Otro recurso</a></li>
+                        <li><a class="text-muted" href="#">Recurso final</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Recursos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Negocio</a></li>
+                        <li><a class="text-muted" href="#">Educación</a></li>
+                        <li><a class="text-muted" href="#">Gobierno</a></li>
+                        <li><a class="text-muted" href="#">Juego</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Acerca de</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Equipo</a></li>
+                        <li><a class="text-muted" href="#">Ubicaciones</a></li>
+                        <li><a class="text-muted" href="#">Privacidad</a></li>
+                        <li><a class="text-muted" href="#">Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- BOOSTRAP JAVASCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
