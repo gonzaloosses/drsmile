@@ -26,8 +26,6 @@ def microsoldadura(request):
         if formulario.is_valid():
             formulario.save()
 
-    
-
     return render (request,'microsoldadura.html',data)
 
 
@@ -116,16 +114,6 @@ def registro(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
     # if request.method=='POST':
     #     form = formulario(request.POST)
     #     if form.is_valid():
@@ -147,25 +135,10 @@ def registro(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
     #         return redirect('index')
     #     else:
     #         form=registroForm()
         #return render(request,)
-
-
-
-
-
 
 
 
