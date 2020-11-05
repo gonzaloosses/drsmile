@@ -81,31 +81,82 @@
     <main class="main text-center">
         <article class="articulo">
             <br><br>
+
+
+
+
             <div class="card m-auto" style="width: 75rem;">
                 <div class="card-body">
 
 
-                    <form name="registro" id="form1" action="" method="POST" class="needs-validation">
-                        {% csrf_token %}
 
 
-                        <table>
-                            {{form.as_table }}
+                    <div class="container">
+                        <br><br><br>
 
-                        </table>
+                        <div class="row">
+                            <div class="col-12 col-md6 offset-md-3">
 
+                                <form name="registro" id="form1" action="" method="POST" class="needs-validation">
+                                    {% csrf_token %}
 
-
-
-
-                        <input type="submit" value="Registrar" class="btn btn-primary" />
-
-
-                        <!-- <button id="botonEnviar" class="btn btn-primary" type="submit">Registrar</button> -->
-                        <br><br><br><br><br>
+                                    <table>
+                                        {{form.as_table }}
+                                    </table>
 
 
-                        <!-- <div class=" form-row ">
+                                    <br><br><br>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Registrar" class="btn btn-primary" />
+                    <input type="reset" value="Limpiar" class="btn btn-primary">
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class=" form-row ">
+                        <div class="container">
+
+                            <div class="col-md-12 ">
+                                <div class="container">
+
+
+
+                                   
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+ -->
+
+
+
+
+
+                    <!-- <div class=" form-row ">
                             <div class="container">
                                 <br><br>
                                 <h1 class="h3 mb-3 font-weight-normal">Registro Usuarios</h1><br>
@@ -151,7 +202,7 @@
                         <br><br> -->
 
 
-                    </form>
+
 
                     {{mensaje}}
                 </div>

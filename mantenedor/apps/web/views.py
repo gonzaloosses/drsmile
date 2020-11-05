@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 #from django.template import render
-from .forms import registroForm
-from .models import Alumno
+from .forms import registroForm,cursoForm
+from .models import Alumno, Curso
 from django.http import HttpResponseRedirect, HttpResponse
 # Create your views here.
+from django.contrib.auth.forms import UserCreationForm
 
 def index (request):
     return render(request,'index.html')
@@ -14,13 +15,39 @@ def nosotros(request):
     return render (request,'nosotros.html')
 
 def microsoldadura(request):
-    return render (request,'microsoldadura.html')
+
+    # cursos= Curso.objects.all()
+
+    data={
+        'form':cursoForm()
+    }
+    if request.method=='POST':
+        formulario = cursoForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+
+    
+
+    return render (request,'microsoldadura.html',data)
+
+
+
+
+def listar_curso(request):
+    cursos = Curso.objects.all()
+    contexto ={'cursos':cursos}
+
+
+    return render (request,'microsoldadura.html',contexto)
+
+
+
 
 def electronica(request):
     return render (request,'electronica.html')
 
 def drones(request):
-    return render (request,'drones.html')    
+    return render (request,'drones.html')
 
 def reballing(request):
     return render (request,'reballing.html')
@@ -43,14 +70,26 @@ def contacto(request):
 
 
         return render(request, 'gracias.html')
-    
+
     return render (request,'contacto.html')
 
 def login(request):
-    return render (request,'login.html')
+    form =UserCreationForm()
+    context ={'form':form}
+
+
+
+
+
+
+    return render (request,'login.html', context)
 
 def recuperacionclave(request):
-    return render (request,'recuperacionclave.html')    
+    return render (request,'recuperacionclave.html')
+
+
+
+
 
 def registro(request):
     data={
@@ -63,9 +102,9 @@ def registro(request):
             formulario.save()
 
 
-    
+
     return render (request,'registro.html',data)
-        
+
 
 
 
@@ -114,7 +153,7 @@ def registro(request):
 
 
 
-   
+
 
 
 
@@ -134,8 +173,8 @@ def registro(request):
     #     form = registroForm()
     # retur render(request)
 
-        
-    
+
+
 
     # form=registroForm(request.POST or None)
     # if formulario.is_valid():
@@ -150,8 +189,8 @@ def registro(request):
     #     "el_form":form,
     # }
 
-  
-    
+
+
 
     # if request.method=='POST':
     #     formulario =registroForm(request.POST)
@@ -164,7 +203,7 @@ def registro(request):
 
 
 
-    # return render (request,'registro.html',context)  
+    # return render (request,'registro.html',context)
 
 
 

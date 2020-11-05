@@ -200,6 +200,103 @@
                                                         <br> OFERTA ESPECIAL $500.000clp ($625 USD)
                                                 </div>
                                             </div>
+                                            <br><br>
+
+
+
+                                            <div class="card">
+                                                <div class="card-body">
+
+
+                                                    <h1>Agregar Curso</h1>
+                                                    <br><br>
+
+
+                                                    <form name="registro" id="form1" action="" method="POST" class="needs-validation">
+                                                        {% csrf_token %}
+
+                                                        <table>
+                                                            {{form.as_table }}
+
+                                                        </table>
+                                                        <br>
+                                                        <input type="reset" value="Limpiar" class="btn btn-primary">
+                                                        <input type="submit" value="suscribirse" class="btn btn-primary">
+
+
+                                                        <br><br><br>
+                                                    </form>
+
+
+                                                </div>
+                                            </div>
+
+                                            <br><br> {% block content %}
+
+
+                                            <div class="card">
+                                                <div class="card-body">
+
+
+                                                    <h1>Listar Curso</h1>
+                                                    <br><br>
+
+                                                    <table>
+                                                        <tr>
+                                                            <th>Nombre</th>
+                                                            <th>Modalidad</th>
+                                                            <th>Valor</th>
+                                                        </tr>
+
+                                                        {% if cursos%} {% for cursos in cursos %}
+
+                                                        <tr>
+                                                            <th>{{cursos.nombreCurso}}</th>
+                                                            <th>{{cursos.modelaidad}}</th>
+                                                            <th>{{cursos.valor}}</th>
+                                                            <th>{{cursos.alumno}}</th>
+
+                                                        </tr>
+
+                                                        {% endfor %} {% else%}
+                                                        <h1>No existen registro de curso</h1>
+
+
+                                                        {%endif%}
+
+                                                    </table>
+
+
+
+                                                    <!-- <form name="registro" id="" action="" method="POST" class="needs-validation">
+                                                        {% csrf_token %}
+
+                                                       
+                                                        <br><br><br>
+                                                    </form> -->
+
+
+                                                </div>
+                                            </div>
+                                            {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <br>
                                         </div>
                                     </div>
