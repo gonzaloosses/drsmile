@@ -83,8 +83,29 @@
             <br><br>
             <div class="card m-auto" style="width: 75rem;">
                 <div class="card-body">
-                    <form id="form1" action="#" method="post" class="needs-validation">
-                        <div class=" form-row ">
+
+
+                    <form name="registro" id="form1" action="" method="POST" class="needs-validation">
+                        {% csrf_token %}
+
+
+                        <table>
+                            {{form.as_table }}
+
+                        </table>
+
+
+
+
+
+                        <input type="submit" value="Registrar" class="btn btn-primary" />
+
+
+                        <!-- <button id="botonEnviar" class="btn btn-primary" type="submit">Registrar</button> -->
+                        <br><br><br><br><br>
+
+
+                        <!-- <div class=" form-row ">
                             <div class="container">
                                 <br><br>
                                 <h1 class="h3 mb-3 font-weight-normal">Registro Usuarios</h1><br>
@@ -127,10 +148,12 @@
                                 <div class="valid-feedback">¡Aceptado!</div>
                             </div>
                         </div>
-                        <br><br>
-                        <button id="botonEnviar" class="btn btn-primary" type="submit">Registrar</button>
-                        <br><br><br><br><br>
+                        <br><br> -->
+
+
                     </form>
+
+                    {{mensaje}}
                 </div>
 
             </div>

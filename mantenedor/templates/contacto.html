@@ -79,29 +79,42 @@
             <br><br><br><br><br>
             <div class="card m-auto" style="width: 75rem;">
                 <div id="fe">
-                    <form class="form-signin text-center">
+
+
+                    <form class="form-signin text-center" action="/contacto/" method="POST">
+                        {% csrf_token %}
+
                         <div class="card-body" id="conta">
+
                             <div class=" gon">
                                 <h1 class="h3 mb-3 font-weight-normal">CONTACTANOS</h1>
                             </div>
+
                             <div class="gonz">
                                 <label for="inputNombre" class="sr-only">nombre </label>
-                                <input type="text" id="inputNombre" class="form-control" placeholder="Nombre" required autofocus>
+                                <input name="nombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre" required autofocus>
                             </div>
+
                             <div class="gonz">
                                 <label for="inputEmail" class="sr-only">email</label>
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+                                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email" required>
                             </div>
+
                             <div class="gonz"> <label for="inputTelefono" class="sr-only">telefono</label>
-                                <input type="number" id="inputTelefono" class="form-control" placeholder="Telefono" required>
+                                <input name="telefono" type="number" id="inputTelefono" class="form-control" placeholder="Telefono" required>
                                 <br><br>
                             </div>
+
                             <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Mensaje" required></textarea>
+                                <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Mensaje" required></textarea>
                             </div>
                         </div>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
                     </form>
+
+
+
+
                 </div>
             </div>
         </article>
